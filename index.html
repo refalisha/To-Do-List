@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List Interaktif</title>
+    <link rel="icon" href="asset/anak1.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="todolist">
+      <div class="todolist-card">
+        <!-- Judul -->
+        <div class="judul">
+          <h1>My To-Do List</h1>
+          <img src="asset/anak1.png" alt="Anak kecil melambaikan tangan" />
+        </div>
+
+        <!-- Fitur 1 & 2 Input Tugas & Validasi -->
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="input-tugas"
+            placeholder="Tambahkan tugas baru"
+            autocomplete="off"
+          />
+          <button id="btn-tambah">Tambah</button>
+        </div>
+
+        <!-- Fitur 3 Rekap Statistik Tugas -->
+        <div class="statistik">
+          <p>Total Tugas: <span id="stat-total">0</span></p>
+          <p>Selesai: <span id="stat-selesai">0</span></p>
+          <p>Belum Selesai: <span id="stat-belum">0</span></p>
+        </div>
+
+        <!-- Fitur 4 & 5 Daftar Tugas (Tandai Selesai & Hapus) -->
+        <ul id="daftar-tugas">
+          <!-- Sengaja dikosongkan.
+               Setiap tombol Tambah diklik atau Enter ditekan,
+               JavaScript membuat tugas baru (<li>)
+               lalu memasukkannya ke dalam <ul> ini. -->
+        </ul>
+
+        <!-- Muncul saat tugas belum ada sama sekali -->
+        <div id="pesan-kosong" class="info-gambar">
+          <img
+            src="asset/anak2.png"
+            alt="Anak kecil memakai kostum monster ungu"
+          />
+          <p>Tugas masih kosong. Yuk tambah tugas baru!</p>
+        </div>
+
+        <!-- Muncul saat semua tugas sudah dicentang selesai -->
+        <div id="pesan-selesai" class="info-gambar hidden">
+          <img src="asset/anak3.png" alt="Anak kecil duduk sambil menunjuk" />
+          <p>Selamat! Semua tugas sudah selesai</p>
+        </div>
+      </div>
+
+      <p id="penutupan">© 2026 Refalisha Nurmeta</p>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

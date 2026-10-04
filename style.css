@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background gradasi miring */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #161228, #48294e, #975f8f);
+  color: #161228;
+  overflow-x: hidden;
+}
+
+#todolist {
+  padding: 70px 15px 40px;
+}
+
+/* Background card ke1  */
+.todolist-card {
+  background-color: #bea7b9;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 35px 25px 45px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(22, 18, 40, 0.5);
+}
+
+/* Judul */
+.judul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.judul h1 {
+  font-family: "Creepster", cursive;
+  font-weight: normal;
+  font-size: 34px;
+  letter-spacing: 2px;
+  color: #48294e;
+}
+
+.judul img {
+  height: 79px;
+}
+
+/* Input & Tombol tambah  */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #ede4eb;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.input-wrapper:focus-within {
+  box-shadow: 0 0 0 2px #975f8f;
+}
+
+.input-wrapper input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  font-family: inherit;
+  font-size: 15px;
+  color: #161228;
+}
+
+.input-wrapper input::placeholder {
+  color: #975f8f;
+}
+
+#btn-tambah {
+  border: none;
+  padding: 14px 24px;
+  background-color: #975f8f;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-tambah:hover {
+  background-color: #48294e;
+}
+
+/* Statistik */
+.statistik {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.statistik p {
+  background-color: #ede4eb;
+  color: #48294e;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.statistik span {
+  font-weight: 700;
+  color: #161228;
+}
+
+/* Daftar Tugas */
+#daftar-tugas {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(72, 41, 78, 0.35);
+  animation: fadeIn 0.3s ease;
+}
+
+.task-label {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* Kotak centang */
+.task-check {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #975f8f;
+  cursor: pointer;
+}
+
+/* Class "completed" dipasang/dilepas oleh JavaScript (classList.toggle) */
+.task-item.completed .task-teks {
+  text-decoration: line-through;
+  color: #48294e;
+  opacity: 0.6;
+}
+
+/* Tombol hapus (×) */
+.btn-hapus {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #48294e;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-hapus:hover {
+  background-color: #975f8f;
+  color: white;
+}
+
+/* Gambar info */
+.info-gambar {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.info-gambar img {
+  height: 120px;
+  animation: melayang 3s ease-in-out infinite;
+}
+
+.info-gambar p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-style: italic;
+  color: #48294e;
+}
+
+/* Class bantuan untuk menyembunyikan elemen */
+.hidden {
+  display: none !important;
+}
+
+/* Penutupan */
+#penutupan {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #bea7b9;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes melayang {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
